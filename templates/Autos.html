@@ -1,0 +1,32 @@
+{% extends 'main'%}
+
+{% block contenido %}
+<h1>Autos</h1>
+<table style="border
+:1px solid black;">
+<thead class="border:1px solid black;">
+    <tr>
+        <th>marca</th>
+        <th>nombre</th>
+        <th>modelo</th>
+        <th>color</th>
+
+    </tr>
+
+</thead>
+<tbody style="border: 1px solid black;">
+    {% for autos in autos %}
+    <tr style="border: 1px solid red;">
+
+    <td>{{autos.marca}}</td>
+    <td>{{autos.nombre}}</td>
+    <td>{{autos.modelo}}</td>
+    <td>{{autos.color}}</td>
+ 
+    </tr>
+    {%endfor%}
+
+</tbody>
+
+</table>
+{%endblock contenido%}

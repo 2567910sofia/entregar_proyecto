@@ -1,0 +1,34 @@
+
+{% extends 'main'%}
+
+{% block contenido %}
+<h1>Clientes</h1>
+<table class="border
+:1px solid black;">
+<thead style="border:1px solid black;">
+    <tr>
+        <th>ID</th>
+        <th>nombre</th>
+        <th>apellido</th>
+        <th>direccion</th>
+        <th>email</th>
+        <th>telefono</th>
+    </tr>
+
+</thead>
+<tbody style="border: 1px solid black;">
+    {% for clientes in clientes %}
+    <tr style="border: 1px solid red;">
+    <td>{{clientes.ID}}</td>
+    <td>{{clientes.nombre}}</td>
+    <td>{{clientes.apellido}}</td>
+    <td>{{clientes.direccion}}</td>
+    <td>{{clientes.email}}</td>
+    <td>{{clientes.telefono}}</td>
+    </tr>
+    {% endfor %}
+
+</tbody>
+
+</table>
+{%endblock contenido%}
